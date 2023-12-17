@@ -8,8 +8,9 @@
   box-sizing: border-box;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background: var(
+    --Gradient-Background-A,
+    linear-gradient(90deg, #01171e 0%, #012732 100%)
+  );
 }
