@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef, useEffect } from 'react';
 // Import css
 import '@klinecharts/pro/dist/klinecharts-pro.css';
@@ -91,7 +93,7 @@ const TradingWidget = () => {
       style={{
         width: '100%',
         height: '450px',
-        background: '#121616',
+        background: 'rgba(255, 255, 255, 0)',
         borderRadius: '8px',
       }}
     ></div>

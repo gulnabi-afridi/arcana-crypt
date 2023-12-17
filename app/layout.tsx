@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import './styles/globals.css';
+import './styles/klinechart.css';
 import Navibar from './components/shared/Navibar/Navibar';
 // ==> slick styles
 import 'slick-carousel/slick/slick.css';
