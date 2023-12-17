@@ -3,7 +3,7 @@ import * as Icons from '../../../svg/Icons';
 
 const OrderBook = () => {
   return (
-    <div className='w-full flex flex-col gap-6 p-6 orderBookSha'>
+    <div className='w-full h-full flex flex-col gap-6 p-6 orderBookSha'>
       <div className='w-full flex justify-between items-center'>
         <div className='flex justify-center items-center gap-1'>
           <p className='text-[20px] text-white'>Orderbook</p>
@@ -52,7 +52,7 @@ const OrderBook = () => {
           </p>
         </div>
         {/* rows --->  */}
-        <div className='w-full flex flex-col gap-[2px] max-h-[400px] overflow-auto hideScrollBar'>
+        <div className='w-full flex flex-col gap-[2px] max-h-[480px] overflow-auto hideScrollBar'>
           {rowsData.map((item, index) => {
             return (
               <div

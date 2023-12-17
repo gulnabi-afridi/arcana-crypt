@@ -8,7 +8,7 @@ const BuyAndSell = () => {
   const [activeBtn, setActiveBtn] = useState('Buy');
 
   return (
-    <div className='w-full max-w-[420px] flex flex-col cardShadow rounded-[16px] pt-4'>
+    <div className='w-full max-w-[400px] flex flex-col cardShadow rounded-[16px] pt-4'>
       {/* button -->  */}
       <div className='w-full h-[45px] grid grid-cols-2 border-b-[1px] borderColor px-5'>
         <button
