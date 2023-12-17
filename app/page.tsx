@@ -6,6 +6,7 @@ import BuyAndSell from './components/Home/BuyAndSell/BuyAndSell';
 import OrderBook from './components/Home/OrderBook/OrderBook';
 import MarketVolume from './components/Home/MarketVolume/MarketVolume';
 import MarketDepth from './components/Home/MarketDepth/MarketDepth';
+import TradeHistory from './components/Home/TradeHistory/TradeHistory';
 
 export default function Home() {
   return (
@@ -37,7 +38,10 @@ export default function Home() {
         </div>
       </ComponentWrapper>
       <div className='w-full bg-[#01171E] py-10'>
-        <ComponentWrapper>{/* trade history ===========>  */}</ComponentWrapper>
+        <ComponentWrapper>
+          {/* trade history ===========>  */}
+          <TradeHistory />
+        </ComponentWrapper>
       </div>
     </main>
   );
