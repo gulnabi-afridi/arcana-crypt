@@ -3,9 +3,6 @@ import { Inter } from 'next/font/google';
 import './styles/globals.css';
 import './styles/klinechart.css';
 import Navibar from './components/shared/Navibar/Navibar';
-// ==> slick styles
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
