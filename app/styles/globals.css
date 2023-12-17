@@ -14,6 +14,9 @@ body {
     linear-gradient(90deg, #01171e 0%, #012732 100%)
   );
 }
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
 
 /* slider card css ==========>  */
 .cardShadow {

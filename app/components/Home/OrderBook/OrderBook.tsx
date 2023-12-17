@@ -51,40 +51,221 @@ const OrderBook = () => {
             Owner
           </p>
         </div>
-        {/* table rows --->  */}
-        <div className='w-full grid grid-cols-[1fr,4fr,1fr] h-[35px] justify-center items-center'>
-          <p className='text-[14px] w-full flex justify-start text-white font-medium underline'>
-            2h8x...Jk28
-          </p>
-          <div className='w-full relative grid grid-cols-[1fr,2fr,1fr] z-20'>
-            <p className='text-[14px] w-full flex justify-end text-white font-medium'>
-              20,249,888.12
-            </p>
-            <div className='w-full grid grid-cols-2'>
-              {/* price -->  */}
-              <p className='text-[14px] w-full flex justify-end items-center pr-1 text-green font-medium'>
-                0.1458721
-              </p>
-              <p className='text-[14px] w-full flex items-center justify-start pl-1 text-red font-medium'>
-                0.1458721
-              </p>
-            </div>
-            <p className='text-[14px] w-full flex justify-start pl-1 text-white font-medium'>
-              0.1458721
-            </p>
-            {/* indicator ----->  */}
-            <div className='w-[50%] absolute h-[35px] bg-green/25 -z-10 right-1/2 '></div>
-            <div className='w-[50%] absolute h-[35px] bg-red/25 left-1/2 -z-10'></div>
-          </div>
+        {/* rows --->  */}
+        <div className='w-full flex flex-col gap-[2px] max-h-[400px] overflow-auto hideScrollBar'>
+          {rowsData.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className='w-full grid grid-cols-[1fr,4fr,1fr] min-h-[35px] justify-center items-center'
+              >
+                {/* owner */}
+                <p className='text-[14px] items-center w-full flex justify-start text-white font-medium underline'>
+                  {item.owner}
+                </p>
+                <div className='w-full h-full relative grid grid-cols-[1fr,2fr,1fr] z-20'>
+                  {/* size */}
+                  <p className='text-[14px] w-full items-center flex justify-end text-white font-medium'>
+                    {item.size}
+                  </p>
+                  <div className='w-full grid grid-cols-2'>
+                    {/* price1    */}
+                    <p className='text-[14px] w-full flex justify-end items-center pr-1 text-green font-medium'>
+                      {item.price1}
+                    </p>
+                    {/* price 2 */}
+                    <p className='text-[14px] w-full flex items-center justify-start pl-1 text-red font-medium'>
+                      {item.price2}
+                    </p>
+                  </div>
+                  {/* size */}
+                  <p className='text-[14px] w-full flex justify-start items-center pl-1 text-white font-medium'>
+                    {item.size2}
+                  </p>
+                  {/* indicator ----->  */}
+                  <div
+                    className={`${item.portionOneWidth} absolute h-[35px] bg-green/25 top-0 -z-10 right-1/2 `}
+                  ></div>
+                  <div
+                    className={`${item.portionTwoWidth} absolute h-[35px] bg-red/25 top-0 left-1/2 -z-10`}
+                  ></div>
+                </div>
 
-          {/* owner --->  */}
-          <p className='text-[14px] w-full flex justify-end text-white font-medium underline'>
-            2h8x...Jk28
-          </p>
+                {/* owner   */}
+                <p className='text-[14px] w-full flex justify-end items-center text-white font-medium underline'>
+                  {item.owner2}
+                </p>
+              </div>
+            );
+          })}
         </div>
+      </div>
+      {/* spread row ====>  */}
+      <div className='w-full h-[40px] bg-[#192431] rounded-[16px]  flex justify-between items-center'>
+        <p className='text-white text-[14px] font-medium pl-4'>Spread</p>
+        <p className='text-white text-[14px] font-medium'>
+          0.00012 (0.00004%){' '}
+        </p>
+        <button className='flex justify-center h-full bg-[#012A36] px-2 rounded-[12px] items-center gap-1'>
+          <p className='text-white text-[14px] font-medium'>$0.001</p>
+          <Icons.arrowDown2 />
+        </button>
       </div>
     </div>
   );
 };
+
+const rowsData = [
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[3%]',
+    portionTwoWidth: 'w-[3%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[7%]',
+    portionTwoWidth: 'w-[7%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[8%]',
+    portionTwoWidth: 'w-[8%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[10%]',
+    portionTwoWidth: 'w-[25%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[12%]',
+    portionTwoWidth: 'w-[12%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[20%]',
+    portionTwoWidth: 'w-[14%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[22%]',
+    portionTwoWidth: 'w-[22%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[26%]',
+    portionTwoWidth: 'w-[26%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[28%]',
+    portionTwoWidth: 'w-[28%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[30%]',
+    portionTwoWidth: 'w-[28%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[30%]',
+    portionTwoWidth: 'w-[30%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[30%]',
+    portionTwoWidth: 'w-[30%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[30%]',
+    portionTwoWidth: 'w-[30%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[30%]',
+    portionTwoWidth: 'w-[30%]',
+  },
+  {
+    owner: '2h8x...Jk28',
+    size: '20,249,888.12',
+    price1: '20,249,888.12',
+    price2: '20,249,888.12',
+    size2: '0.1458721',
+    owner2: '2h8x...Jk28',
+    portionOneWidth: 'w-[30%]',
+    portionTwoWidth: 'w-[30%]',
+  },
+];
 
 export default OrderBook;
