@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Card = () => {
   return (
-    <div className='w-[350px] flex justify-between items-start sliderCard px-4 py-3 rounded-[16px]'>
+    <div className='w-[330px] flex justify-between items-start sliderCard px-4 py-3 rounded-[16px]'>
       {/* left port ----> */}
       <div className='flex flex-col gap-2'>
         <div className='flex justify-center  items-center'>

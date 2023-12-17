@@ -1,10 +1,9 @@
-import Image from 'next/image';
-import Slider from './components/Home/Slider/Slider';
+import InfoSlider from './components/Home/InfoSlider/InfoSlider';
 
 export default function Home() {
   return (
     <main className='h-screen w-full'>
-      <Slider />
+      <InfoSlider />
     </main>
   );
 }
