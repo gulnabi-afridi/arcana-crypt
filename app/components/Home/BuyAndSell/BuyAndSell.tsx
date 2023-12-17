@@ -8,28 +8,28 @@ const BuyAndSell = () => {
   const [activeBtn, setActiveBtn] = useState('Buy');
 
   return (
-    <div className='w-full flex flex-col cardShadow rounded-[16px] pt-4'>
+    <div className='w-full max-w-[420px] flex flex-col cardShadow rounded-[16px] pt-4'>
       {/* button -->  */}
       <div className='w-full h-[45px] grid grid-cols-2 border-b-[1px] borderColor px-5'>
         <button
           onClick={() => setActiveBtn('Buy')}
           className={`w-full flex justify-center ${
             activeBtn === 'Buy'
-              ? 'border-b-[2px] border-green'
-              : 'border-b-[2px] border-transparent'
+              ? 'border-b-[2px] border-green text-green opacity-100'
+              : 'border-b-[2px] border-transparent text-white opacity-30'
           }  radius items-center`}
         >
-          <p className='text-[16px] font-medium text-green'>Buy</p>
+          <p className='text-[16px] font-medium'>Buy</p>
         </button>
         <button
           onClick={() => setActiveBtn('Sell')}
           className={`w-full flex justify-center ${
             activeBtn === 'Sell'
-              ? 'border-b-[2px] border-green'
-              : 'border-b-[2px] border-transparent'
+              ? 'border-b-[2px] border-green text-green opacity-100'
+              : 'border-b-[2px] border-transparent text-white opacity-30'
           }  radius items-center`}
         >
-          <p className='text-[16px] font-medium text-white opacity-30'>Sell</p>
+          <p className='text-[16px] font-medium'>Sell</p>
         </button>
       </div>
       {/* wallet ---->  */}
@@ -58,7 +58,7 @@ const BuyAndSell = () => {
           <input
             type='number'
             placeholder='0.0000'
-            className='bg-transparent border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none text-white/80'
+            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none text-white/80'
           />
         </div>
         {/* coin selection --->  */}
@@ -84,7 +84,7 @@ const BuyAndSell = () => {
           <input
             type='number'
             placeholder='0.0000'
-            className='bg-transparent border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none text-white/80'
+            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none text-white/80'
           />
         </div>
         {/* coin selection --->  */}

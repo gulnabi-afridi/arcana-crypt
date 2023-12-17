@@ -11,13 +11,15 @@ export default function Home() {
       <ComponentWrapper>
         <div className='w-full flex flex-col'>
           {/* trading chart + Buy and Sell portion ========>  */}
-          <div className='w-full grid grid-cols-[1.7fr,1fr] justify-center items-start py-6'>
+          <div className='w-full grid grid-cols-[1.8fr,1fr] justify-center items-start py-6'>
             {/* trading chart ----->  */}
             <div className='w-full bg-transparent h-full'>
               <TradingWidget />
             </div>
             {/* buy and sell ------->  */}
-            <BuyAndSell />
+            <div className='w-full flex justify-center items-center'>
+              <BuyAndSell />
+            </div>
           </div>
         </div>
       </ComponentWrapper>

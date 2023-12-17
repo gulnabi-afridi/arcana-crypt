@@ -92,7 +92,7 @@ const TradingWidget = () => {
       ref={chartRef}
       style={{
         width: '100%',
-        height: '450px',
+        height: '480px',
         background: 'rgba(255, 255, 255, 0)',
         borderRadius: '8px',
       }}

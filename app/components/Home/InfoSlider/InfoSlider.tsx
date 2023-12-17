@@ -14,6 +14,7 @@ const InfoSlider = () => {
     cssEase: 'linear',
     slidesToShow: 4.1,
     slidesToScroll: 1.1,
+    arrows: false,
   };
 
   return (
