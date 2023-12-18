@@ -15,6 +15,7 @@ const TradeHistory = () => {
           {historyTableHeader.map((item, index) => {
             return (
               <p
+                key={index}
                 className={`flex ${
                   item === 'Transaction' ? 'justify-end' : 'justify-start'
                 }  text-[14px] font-medium capitalize text-white/50 items-center w-full`}

@@ -53,7 +53,7 @@ const BuyAndSell = () => {
         {/* input --> */}
         <div className='flex flex-col gap-2'>
           <p className='text-[12px] font-medium text-white opacity-75'>
-            You're paying
+            Youre paying
           </p>
           <input
             type='number'
@@ -79,7 +79,7 @@ const BuyAndSell = () => {
         {/* input --> */}
         <div className='flex flex-col gap-2'>
           <p className='text-[12px] font-medium text-white opacity-75'>
-            You're paying
+            Youre paying
           </p>
           <input
             type='number'

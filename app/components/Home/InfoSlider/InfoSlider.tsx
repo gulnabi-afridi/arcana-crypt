@@ -14,7 +14,7 @@ const InfoSlider = () => {
         speed={150}
       >
         {[0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => {
-          return <Card />;
+          return <Card key={index} />;
         })}
       </Marquee>
     </div>
