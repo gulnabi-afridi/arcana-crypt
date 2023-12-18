@@ -8,6 +8,7 @@ import MarketVolume from './components/Home/MarketVolume/MarketVolume';
 import MarketDepth from './components/Home/MarketDepth/MarketDepth';
 import TradeHistory from './components/Home/TradeHistory/TradeHistory';
 import MarketInformation from './components/Home/MarketInformation/MarketInformation';
+import AdditionalDetails from './components/Home/AdditionalDetails/AdditionalDetails';
 
 export default function Home() {
   return (
@@ -43,9 +44,11 @@ export default function Home() {
           {/* trade history ===========>  */}
           <TradeHistory />
           {/* market infomation + additional detail =======> */}
-          <div className='w-full grid grid-cols-2 py-10'>
+          <div className='w-full grid gap-6 grid-cols-2 py-10'>
             {/* Market Volumne --->  */}
             <MarketInformation />
+            {/* Additional Detail -----> */}
+            <AdditionalDetails />
           </div>
         </ComponentWrapper>
       </div>

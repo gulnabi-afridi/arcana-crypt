@@ -6,7 +6,7 @@ import Link from 'next/link';
 const MarketInformation = () => {
   return (
     <div className='w-full flex flex-col bg-[#09303c] border-[1px] borderColor rounded-[16px] '>
-      <div className='w-full h-[50px] flex justify-between items-center px-8'>
+      <div className='w-full h-[60px] flex justify-between items-center px-8'>
         <p className='text-[20px] text-white font-semibold'>
           Market Information
         </p>
