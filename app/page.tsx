@@ -7,6 +7,7 @@ import OrderBook from './components/Home/OrderBook/OrderBook';
 import MarketVolume from './components/Home/MarketVolume/MarketVolume';
 import MarketDepth from './components/Home/MarketDepth/MarketDepth';
 import TradeHistory from './components/Home/TradeHistory/TradeHistory';
+import MarketInformation from './components/Home/MarketInformation/MarketInformation';
 
 export default function Home() {
   return (
@@ -41,6 +42,11 @@ export default function Home() {
         <ComponentWrapper>
           {/* trade history ===========>  */}
           <TradeHistory />
+          {/* market infomation + additional detail =======> */}
+          <div className='w-full grid grid-cols-2 py-10'>
+            {/* Market Volumne --->  */}
+            <MarketInformation />
+          </div>
         </ComponentWrapper>
       </div>
     </main>
