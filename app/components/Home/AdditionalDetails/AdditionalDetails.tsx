@@ -50,7 +50,10 @@ const AdditionalDetails = () => {
       <div className='w-full flex flex-col px-8'>
         {additionalDetail.map((item, index) => {
           return (
-            <div className='w-full h-[45px] border-b-[1px] borderColor flex justify-between items-center'>
+            <div
+              key={index}
+              className='w-full h-[45px] border-b-[1px] borderColor flex justify-between items-center'
+            >
               <p className='text-[14px] text-white font-medium'>{item.name}</p>
               <p className='text-[16px] text-white font-medium'>{item.value}</p>
             </div>
