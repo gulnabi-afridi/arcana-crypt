@@ -15,8 +15,8 @@ const BuyAndSell = () => {
           onClick={() => setActiveBtn('Buy')}
           className={`w-full flex justify-center ${
             activeBtn === 'Buy'
-              ? 'border-b-[2px] border-green text-green opacity-100'
-              : 'border-b-[2px] border-transparent text-white opacity-30'
+              ? 'border-b-[2px] dark:border-success-100 border-success-900 dark:text-success-100 text-success-900 opacity-100'
+              : 'border-b-[2px] border-transparent dark:text-foreground-100 text-foreground-900 opacity-30'
           }  radius items-center`}
         >
           <p className='text-[16px] font-medium'>Buy</p>
@@ -25,8 +25,8 @@ const BuyAndSell = () => {
           onClick={() => setActiveBtn('Sell')}
           className={`w-full flex justify-center ${
             activeBtn === 'Sell'
-              ? 'border-b-[2px] border-green text-green opacity-100'
-              : 'border-b-[2px] border-transparent text-white opacity-30'
+              ? 'border-b-[2px] dark:border-success-100 border-success-900 dark:text-success-100 text-success-900 opacity-100'
+              : 'border-b-[2px] border-transparent dark:text-foreground-100 text-foreground-900 opacity-30'
           }  radius items-center`}
         >
           <p className='text-[16px] font-medium'>Sell</p>
@@ -36,14 +36,16 @@ const BuyAndSell = () => {
       <div className='w-full flex justify-between bg-[#012630] py-4 items-center px-5'>
         <div className='flex justify-center items-center gap-1'>
           <Icons.wallet />
-          <p className='text-[10px] text-white font-medium'>? USDC</p>
+          <p className='text-[10px] dark:text-foreground-100 text-foreground-900 font-medium'>
+            ? USDC
+          </p>
         </div>
         {/* half or max -->  */}
         <div className='flex justify-center items-center gap-2'>
-          <button className='text-white text-[12px] font-medium halfBg rounded-[12px] px-[12px] py-[2px]'>
+          <button className='dark:text-foreground-100 text-foreground-900 text-[12px] font-medium halfBg rounded-[12px] px-[12px] py-[2px]'>
             HALF
           </button>
-          <button className='text-white text-[12px] font-medium halfBg rounded-[12px] px-[12px] py-[2px]'>
+          <button className='dark:text-foreground-100 text-foreground-900 text-[12px] font-medium halfBg rounded-[12px] px-[12px] py-[2px]'>
             MAX
           </button>
         </div>
@@ -52,13 +54,13 @@ const BuyAndSell = () => {
       <div className='w-full flex justify-between items-center border-b-[1px] borderColor py-4 px-5'>
         {/* input --> */}
         <div className='flex flex-col gap-2'>
-          <p className='text-[12px] font-medium text-white opacity-75'>
+          <p className='text-[12px] font-medium dark:text-foreground-100 text-foreground-900 opacity-75'>
             Youre paying
           </p>
           <input
             type='number'
             placeholder='0.0000'
-            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none text-white/80'
+            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none opacity-80 dark:text-foreground-100 text-foreground-900'
           />
         </div>
         {/* coin selection --->  */}
@@ -70,7 +72,9 @@ const BuyAndSell = () => {
             height={20}
             className='object-cover'
           />
-          <p className='text-white text-[20px] font-medium'>USDC</p>
+          <p className='dark:text-foreground-100 text-foreground-900 text-[20px] font-medium'>
+            USDC
+          </p>
           <Icons.arrowDown />
         </button>
       </div>
@@ -78,18 +82,20 @@ const BuyAndSell = () => {
       <div className='w-full flex justify-between items-center border-b-[1px] borderColor py-4 px-5'>
         {/* input --> */}
         <div className='flex flex-col gap-2'>
-          <p className='text-[12px] font-medium text-white opacity-75'>
+          <p className='text-[12px] font-medium dark:text-foreground-100 text-foreground-900 opacity-75'>
             Youre paying
           </p>
           <input
             type='number'
             placeholder='0.0000'
-            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none text-white/80'
+            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none dark:text-foreground-100 text-foreground-900 opacity-80'
           />
         </div>
         {/* coin selection --->  */}
         <div className='flex flex-col gap-2'>
-          <p className='text-[12px] font-medium text-green text-end'>• Live</p>
+          <p className='text-[12px] font-medium dark:text-success-100 text-success-900 text-end'>
+            • Live
+          </p>
           <button className='flex justify-center items-center gap-2'>
             <Image
               src='/assets/crypto.svg'
@@ -98,19 +104,21 @@ const BuyAndSell = () => {
               height={20}
               className='object-cover'
             />
-            <p className='text-white text-[20px] font-medium'>PYTH</p>
+            <p className='dark:text-foreground-100 text-foreground-900 text-[20px] font-medium'>
+              PYTH
+            </p>
             <Icons.arrowDown />
           </button>
         </div>
       </div>
       {/* connect wallet ----> */}
       <div className='w-full px-5 py-4'>
-        <button className='w-full py-[10px] border-[1px] border-pink hover:opacity-70 active:translate-y-[2px] text-[16px] font-medium text-pink tracking-wide px-[16px] rounded-[12px] bg-[#012630]'>
+        <button className='w-full py-[10px] border-[1px] dark:border-primary-100 border-primary-900 hover:opacity-70 active:translate-y-[2px] text-[16px] font-medium dark:text-primary-100 text-primary-900 tracking-wide px-[16px] rounded-[12px] bg-[#012630]'>
           Connect Wallet
         </button>
       </div>
       {/* powerd by ---->  */}
-      <div className='w-full py-4 rounded-b-[16px] text-[14px] text-white font-medium bg-[#012630] flex justify-center items-center gap-1'>
+      <div className='w-full py-4 rounded-b-[16px] text-[14px] dark:text-foreground-100 text-foreground-900 font-medium bg-[#012630] flex justify-center items-center gap-1'>
         <p>Powered by</p>
         <Icons.powerdBy />
         <p>Powered by</p>

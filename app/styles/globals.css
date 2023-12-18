@@ -9,11 +9,9 @@
 }
 
 body {
-  background: var(
-    --Gradient-Background-A,
-    linear-gradient(90deg, #01171e 0%, #012732 100%)
-  );
+  background: linear-gradient(90deg, #01171e 0%, #012732 100%);
 }
+
 .hideScrollBar::-webkit-scrollbar {
   display: none;
 }

@@ -21,19 +21,25 @@ const Card = () => {
             height={24}
             className='object-fill -ml-3 z-0'
           />
-          <p className='text-[14px] text-white font-medium ml-2'>BONK/USDC</p>
+          <p className='text-[14px] dark:text-foreground-100 text-foreground-900 font-medium ml-2'>
+            BONK/USDC
+          </p>
         </div>
-        <p className='text-[20px] font-medium text-white'>$0.0040921</p>
-        <p className='text-[12px] text-white font-medium opacity-25'>
+        <p className='text-[20px] font-medium dark:text-foreground-100 text-foreground-900'>
+          $0.0040921
+        </p>
+        <p className='text-[12px] dark:text-foreground-100 text-foreground-900 font-medium opacity-25'>
           Vol $142,284,877
         </p>
       </div>
       {/* right portion ----->  */}
       <div className='flex flex-col gap-2'>
-        <p className='text-[12px] text-white font-medium py-[2px] px-[12px] timeLine rounded-[12px]'>
+        <p className='text-[12px] dark:text-foreground-100 text-foreground-900 font-medium py-[2px] px-[12px] timeLine rounded-[12px]'>
           24H
         </p>
-        <p className='text-[14px] text-green font-medium'>+9.23%</p>
+        <p className='text-[14px] dark:text-success-100 text-success-900 font-medium'>
+          +9.23%
+        </p>
       </div>
     </div>
   );

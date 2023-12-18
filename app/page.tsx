@@ -9,6 +9,7 @@ import MarketDepth from './components/Home/MarketDepth/MarketDepth';
 import TradeHistory from './components/Home/TradeHistory/TradeHistory';
 import MarketInformation from './components/Home/MarketInformation/MarketInformation';
 import AdditionalDetails from './components/Home/AdditionalDetails/AdditionalDetails';
+import ToggleTheme from './components/shared/ToggleTheme/ToggleTheme';
 
 export default function Home() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
             {/* Additional Detail -----> */}
             <AdditionalDetails />
           </div>
+          <ToggleTheme />
         </ComponentWrapper>
       </div>
     </main>
