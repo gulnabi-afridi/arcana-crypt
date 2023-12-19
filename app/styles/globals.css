@@ -60,3 +60,12 @@ input::-webkit-inner-spin-button {
   border: 1px solid var(--foreground-night-400, rgba(255, 255, 255, 0.13));
   background: var(--foreground-night-100, rgba(255, 255, 255, 0.03));
 }
+
+.recharts-bar-rectangle path {
+  border-radius: 30px !important;
+  background-color: red !important;
+}
+
+.recharts-cartesian-grid-horizontal :last-child {
+  display: none;
+}
