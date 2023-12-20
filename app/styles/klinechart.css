@@ -1,6 +1,7 @@
 .klinecharts-pro-watermark {
   display: none !important;
 }
+
 .tools {
   display: none !important;
 }
@@ -42,4 +43,48 @@
 }
 .klinecharts-pro-content {
   font-family: 'Inter', 'sans-serif';
+}
+.klinecharts-pro-drawing-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.klinecharts-pro-drawing-bar {
+  overflow: scroll !important;
+}
+
+.klinecharts-pro-price-unit {
+  display: none !important;
+}
+
+@media screen and (max-width: 500px) {
+  .icon-overlay {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .menu-container {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .klinecharts-pro-drawing-bar .item {
+    margin-top: 4px !important;
+    justify-content: flex-start !important;
+  }
+  .klinecharts-pro-period-bar {
+    font-size: 10px !important;
+  }
+  .klinecharts-pro-period-bar .item.selected {
+    font-size: 10px !important;
+  }
+  .symbol {
+    font-size: 14px !important;
+  }
+  .klinecharts-pro-price-unit {
+    display: none !important;
+  }
+  .klinecharts-pro-period-bar::-webkit-scrollbar {
+    display: none !important;
+  }
+  .klinecharts-pro-period-bar {
+    overflow: scroll !important;
+  }
 }

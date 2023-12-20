@@ -79,7 +79,7 @@ const MarketVolume = () => {
 
   return (
     <div className='w-full flex justify-center items-center'>
-      <div className='h-[340px] w-full max-w-[400px] flex flex-col justify-between items-center cardShadow rounded-[16px]'>
+      <div className='h-[300px] sm:h-[340px] w-full max-w-[400px] flex flex-col justify-between items-center cardShadow rounded-[16px]'>
         <div className='w-full flex flex-col items-start gap-3 p-5'>
           <p className='text-[20px] text-white '>Market Volume (USD)</p>
           {/* time line --->  */}

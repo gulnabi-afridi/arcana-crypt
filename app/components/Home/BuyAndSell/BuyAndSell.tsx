@@ -8,9 +8,9 @@ const BuyAndSell = () => {
   const [activeBtn, setActiveBtn] = useState('Buy');
 
   return (
-    <div className='w-full max-w-[400px] flex flex-col cardShadow rounded-[16px] pt-4'>
+    <div className='w-full max-w-[400px] flex flex-col cardShadow rounded-[16px] pt-2 sm:pt-4'>
       {/* button -->  */}
-      <div className='w-full h-[45px] grid grid-cols-2 border-b-[1px] borderColor px-5'>
+      <div className='w-full h-[40px] sm:h-[45px] grid grid-cols-2 border-b-[1px] borderColor px-5'>
         <button
           onClick={() => setActiveBtn('Buy')}
           className={`w-full flex justify-center ${
@@ -51,7 +51,7 @@ const BuyAndSell = () => {
         </div>
       </div>
       {/* you are paying input ------>  */}
-      <div className='w-full flex justify-between items-center border-b-[1px] borderColor py-4 px-5'>
+      <div className='w-full flex justify-between items-center border-b-[1px] borderColor py-3 sm:py-4 px-3 sm:px-5'>
         {/* input --> */}
         <div className='flex flex-col gap-2'>
           <p className='text-[12px] font-medium dark:text-foreground-100 text-foreground-900 opacity-75'>
@@ -60,7 +60,7 @@ const BuyAndSell = () => {
           <input
             type='number'
             placeholder='0.0000'
-            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none opacity-80 dark:text-foreground-100 text-foreground-900'
+            className='bg-transparent w-[150px] border-none px-1 text-[20px] sm:text-[28px] font-semibold placeholder:opacity-30 focus:outline-none opacity-80 dark:text-foreground-100 text-foreground-900'
           />
         </div>
         {/* coin selection --->  */}
@@ -72,14 +72,14 @@ const BuyAndSell = () => {
             height={20}
             className='object-cover'
           />
-          <p className='dark:text-foreground-100 text-foreground-900 text-[20px] font-medium'>
+          <p className='dark:text-foreground-100 text-foreground-900 text-[16px] sm:text-[20px] font-medium'>
             USDC
           </p>
           <Icons.arrowDown />
         </button>
       </div>
       {/* to recieve  ------->  */}
-      <div className='w-full flex justify-between items-center border-b-[1px] borderColor py-4 px-5'>
+      <div className='w-full flex justify-between items-center border-b-[1px] borderColor py-3 sm:py-4 px-3 sm:px-5'>
         {/* input --> */}
         <div className='flex flex-col gap-2'>
           <p className='text-[12px] font-medium dark:text-foreground-100 text-foreground-900 opacity-75'>
@@ -88,7 +88,7 @@ const BuyAndSell = () => {
           <input
             type='number'
             placeholder='0.0000'
-            className='bg-transparent w-[150px] border-none px-1 text-[28px] font-semibold placeholder:opacity-30 focus:outline-none dark:text-foreground-100 text-foreground-900 opacity-80'
+            className='bg-transparent w-[150px] border-none px-1 text-[20px] sm:text-[28px] font-semibold placeholder:opacity-30 focus:outline-none dark:text-foreground-100 text-foreground-900 opacity-80'
           />
         </div>
         {/* coin selection --->  */}
@@ -104,7 +104,7 @@ const BuyAndSell = () => {
               height={20}
               className='object-cover'
             />
-            <p className='dark:text-foreground-100 text-foreground-900 text-[20px] font-medium'>
+            <p className='dark:text-foreground-100 text-foreground-900 text-[16px] sm:text-[20px] font-medium'>
               PYTH
             </p>
             <Icons.arrowDown />
@@ -113,12 +113,12 @@ const BuyAndSell = () => {
       </div>
       {/* connect wallet ----> */}
       <div className='w-full px-5 py-4'>
-        <button className='w-full py-[10px] border-[1px] dark:border-primary-100 border-primary-900 hover:opacity-70 active:translate-y-[2px] text-[16px] font-medium dark:text-primary-100 text-primary-900 tracking-wide px-[16px] rounded-[12px] bg-[#012630]'>
+        <button className='w-full py-[8px] sm:py-[10px] border-[1px] dark:border-primary-100 border-primary-900 hover:opacity-70 active:translate-y-[2px] text-[14px] sm:text-[16px] font-medium dark:text-primary-100 text-primary-900 tracking-wide px-[16px] rounded-[12px] bg-[#012630]'>
           Connect Wallet
         </button>
       </div>
       {/* powerd by ---->  */}
-      <div className='w-full py-4 rounded-b-[16px] text-[14px] dark:text-foreground-100 text-foreground-900 font-medium bg-[#012630] flex justify-center items-center gap-1'>
+      <div className='w-full py-3 sm:py-4 rounded-b-[16px] text-[12px] sm:text-[14px] dark:text-foreground-100 text-foreground-900 font-medium bg-[#012630] flex justify-center items-center gap-1'>
         <p>Powered by</p>
         <Icons.powerdBy />
         <p>Powered by</p>

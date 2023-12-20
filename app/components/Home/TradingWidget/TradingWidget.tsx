@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 // Import css
 import '@klinecharts/pro/dist/klinecharts-pro.css';
 
@@ -8,6 +8,19 @@ const TradingWidget = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
   const chartInitializedRef = useRef<boolean>(false);
   const apiKey = 'Dj7335wndobLF3uODz735o1mwixibkFr';
+
+  const [chartHeight, setChartHeight] = useState<number>();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setChartHeight(window.innerWidth < 700 ? 300 : 480);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     // Create Instance
@@ -92,7 +105,7 @@ const TradingWidget = () => {
       ref={chartRef}
       style={{
         width: '100%',
-        height: '480px',
+        height: chartHeight,
         background: 'rgba(255, 255, 255, 0)',
         borderRadius: '8px',
       }}

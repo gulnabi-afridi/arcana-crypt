@@ -1,6 +1,9 @@
 .highcharts-background {
   fill: transparent !important;
 }
+.marketDepthCon {
+  max-width: 400px;
+}
 
 #container text {
   fill: white !important;
@@ -26,4 +29,22 @@
   stroke: white;
   opacity: 60%;
   stroke-dasharray: 4, 2;
+}
+
+@media screen and (max-width: 850px) {
+  .marketDepthCon {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .marketDepthCon {
+    max-width: 330px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .marketDepthCon {
+    max-width: 400px;
+  }
 }

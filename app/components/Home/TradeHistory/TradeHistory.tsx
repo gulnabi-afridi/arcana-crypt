@@ -26,7 +26,7 @@ const TradeHistory = () => {
           })}
         </div>
         {/* table rows ---->  */}
-        <div className='w-full max-h-[250px] overflow-auto hideScrollBar'>
+        <div className='w-full max-h-[150px] md:max-h-[250px] overflow-auto hideScrollBar'>
           {historyTableRows.map((item, index) => {
             return (
               <div

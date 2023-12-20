@@ -18,10 +18,12 @@ export default function Home() {
       <ComponentWrapper>
         <div className='w-full flex flex-col'>
           {/* trading chart + Buy and Sell portion ========>  */}
-          <div className='w-full grid grid-cols-[1.9fr,1fr] justify-center items-start py-6'>
+          <div className='w-full grid grid-cols-1 lg:grid-cols-[1.9fr,1fr] lg:gap-0 gap-8 justify-center items-start py-2 sm:py-6'>
             {/* trading chart ----->  */}
-            <div className='w-full bg-transparent h-full'>
-              <TradingWidget />
+            <div className='w-full flex justify-center items-center'>
+              <div className='w-full max-w-[700px] lg:max-w-none bg-transparent h-full'>
+                <TradingWidget />
+              </div>
             </div>
             {/* buy and sell ------->  */}
             <div className='w-full flex justify-center items-center'>
@@ -29,11 +31,11 @@ export default function Home() {
             </div>
           </div>
           {/* order book + market volume + market depth section =========> */}
-          <div className='w-full grid grid-cols-[1.9fr,1fr] gap-0 justify-center items-start pt-6 pb-20'>
+          <div className='w-full grid grid-cols-1 xl:grid-cols-[1.9fr,1fr] gap-6 xl:gap-0 justify-center items-start pt-6 pb-20'>
             {/* order book ---> */}
             <OrderBook />
             {/* market volume ----->  */}
-            <div className='w-full gap-y-4 flex flex-col'>
+            <div className='w-full gap-y-4 gap-x-4 flex flex-col md:flex-row xl:flex-col'>
               <MarketVolume />
               <MarketDepth />
             </div>
@@ -43,15 +45,15 @@ export default function Home() {
       <div className='w-full bg-[#01171E] py-10'>
         <ComponentWrapper>
           {/* trade history ===========>  */}
-          <TradeHistory />
+          {/* <TradeHistory /> */}
           {/* market infomation + additional detail =======> */}
           <div className='w-full grid gap-6 grid-cols-2 py-10'>
             {/* Market Volumne --->  */}
-            <MarketInformation />
+            {/* <MarketInformation /> */}
             {/* Additional Detail -----> */}
-            <AdditionalDetails />
+            {/* <AdditionalDetails /> */}
           </div>
-          <ToggleTheme />
+          {/* <ToggleTheme /> */}
         </ComponentWrapper>
       </div>
     </main>

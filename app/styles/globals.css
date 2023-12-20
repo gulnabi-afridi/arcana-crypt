@@ -67,3 +67,16 @@ input::-webkit-inner-spin-button {
 }
 
 /* order book styles ends here ===============>  */
+
+/* drawer styles ===========>  */
+.drawer {
+  width: 70% !important;
+  background-color: #012732 !important;
+}
+
+@media screen and (max-width: 500px) {
+  .drawer {
+    width: 100% !important;
+    background-color: #012732 !important;
+  }
+}

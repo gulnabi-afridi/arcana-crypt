@@ -3,36 +3,41 @@ import * as Icons from '../../../svg/Icons';
 
 const OrderBook = () => {
   return (
-    <div className='w-full h-full flex flex-col gap-6 p-6 orderBookSha'>
-      <div className='w-full flex justify-between items-center'>
-        <div className='flex justify-center items-center gap-1'>
+    <div className='w-full h-full flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 orderBookSha'>
+      <div className='w-full grid grid-cols-2 md:grid-cols-[2fr,1fr,1.5fr] gap-y-4'>
+        <div className='flex justify-start items-center gap-1 order-1'>
           <p className='text-[20px] text-white'>Orderbook</p>
           <p className='text-[12px] text-green'>• Live</p>
         </div>
-        <div className='flex justify-center bg-[#012A36] rounded-[12px] py-[6px] px-[12px] items-center gap-1'>
-          <Icons.arrowUp />
-          <p className='text-[14px] text-green font-medium'>0.1459881</p>
+        <div className='w-full flex justify-center items-center order-2'>
+          <div className='flex justify-center bg-[#012A36] rounded-[12px] py-[6px] px-[12px] items-center gap-1'>
+            <Icons.arrowUp />
+            <p className='text-[14px] text-green font-medium'>0.1459881</p>
+          </div>
         </div>
-        <div className='flex relative justify-center items-center h-[40px] min-w-[229px]'>
-          <input
-            placeholder='Search address, .sol domain...'
-            type='text'
-            className='w-full h-full rounded-[12px] placeholder:opacity-30 text-white opacity-90 orderBookSearchBg border-none focus:outline-none pl-7 pr-2'
-          />
-          <div className='absolute left-[10px] '>
-            <Icons.search />
+        <div className='w-full flex justify-end order-3 col-span-2 md:col-span-1'>
+          <div className='flex relative justify-center items-center h-[40px] min-w-[229px]'>
+            <input
+              placeholder='Search address, .sol domain...'
+              type='text'
+              className='w-full h-full rounded-[12px] placeholder:opacity-30 text-white opacity-90 orderBookSearchBg border-none focus:outline-none pl-7 pr-2'
+            />
+            <div className='absolute left-[10px] '>
+              <Icons.search />
+            </div>
           </div>
         </div>
       </div>
-      <div className='w-full'>
+
+      <div className='w-full overflow-auto hideScrollBar'>
         {/* table ==============>  */}
         {/* header --> */}
-        <div className='w-full h-[40px] grid grid-cols-[1fr,4fr,1fr] border-b-[1px] borderColor'>
+        <div className='w-full min-w-[750px] h-[40px] grid grid-cols-[1fr,4fr,1fr] border-b-[1px] borderColor'>
           {/* owner */}
           <p className='flex  justify-start w-full text-[14px] font-medium text-white/50'>
             Owner
           </p>
-          <div className='w-full grid grid-cols-[1fr,2fr,1fr]'>
+          <div className='w-full grid grid-cols-[1fr,3.5fr,1fr] sm:grid-cols-[1fr,2fr,1fr]'>
             {/* size ---> */}
             <p className='flex justify-end w-full text-[14px] font-medium text-white/50'>
               Size
@@ -52,7 +57,7 @@ const OrderBook = () => {
           </p>
         </div>
         {/* rows --->  */}
-        <div className='w-full flex flex-col gap-[2px] max-h-[480px] overflow-auto hideScrollBar'>
+        <div className='w-full flex min-w-[750px] flex-col gap-[2px] max-h-[250px] sm:max-h-[350px] md:max-h-[480px] overflow-auto hideScrollBar'>
           {rowsData.map((item, index) => {
             return (
               <div
@@ -63,7 +68,7 @@ const OrderBook = () => {
                 <p className='text-[14px] items-center w-full flex justify-start text-white font-medium underline'>
                   {item.owner}
                 </p>
-                <div className='w-full h-full relative grid grid-cols-[1fr,2fr,1fr] z-20'>
+                <div className='w-full h-full relative grid grid-cols-[1fr,3.5fr,1fr] sm:grid-cols-[1fr,2fr,1fr] z-20'>
                   {/* size */}
                   <p className='text-[14px] w-full items-center flex justify-end text-white font-medium'>
                     {item.size}

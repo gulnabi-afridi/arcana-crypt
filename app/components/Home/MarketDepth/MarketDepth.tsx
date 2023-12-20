@@ -14,6 +14,7 @@ const MarketDepth = () => {
           type: 'area',
           zoomType: 'xy',
         },
+
         title: {
           text: '',
         },
@@ -139,7 +140,7 @@ const MarketDepth = () => {
 
   return (
     <div className='w-full flex justify-center items-center'>
-      <div className='h-[340px] w-full max-w-[400px] pt-4 flex flex-col justify-between items-center cardShadow rounded-[16px]'>
+      <div className='h-[300px] sm:h-[340px] w-full marketDepthCon pt-4 flex flex-col justify-between items-center cardShadow rounded-[16px]'>
         {/* coins -----> */}
         <div className='flex flex-col gap-4 items-start w-full px-5'>
           <p className='text-[20px] text-white '>Market Depth</p>
