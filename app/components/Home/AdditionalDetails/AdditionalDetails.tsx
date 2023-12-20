@@ -37,7 +37,7 @@ const AdditionalDetails = () => {
             </p>
             <div className='flex gap-2 justify-center items-center'>
               <Image
-                src='/assets/crypto.svg'
+                src='/assets/coin.svg'
                 alt=''
                 width={32}
                 height={32}

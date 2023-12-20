@@ -159,7 +159,7 @@ const MarketDepth = () => {
             {/* coin 2 -->  */}
             <div className='flex justify-center bg-danger-100/60 py-[3px] px-[10px] rounded-[16px] items-center gap-1'>
               <Image
-                src='/assets/crypto.svg'
+                src='/assets/coin.svg'
                 alt=''
                 className='object-fill'
                 width={16}

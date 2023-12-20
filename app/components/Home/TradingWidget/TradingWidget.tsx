@@ -11,13 +11,23 @@ const TradingWidget = () => {
 
   const [chartHeight, setChartHeight] = useState<number>();
 
-  const computeChartHeight = () => {
-    if (typeof window !== 'undefined') {
+  useEffect(() => {
+    const computeChartHeight = () => {
       return window.innerWidth < 700 ? 300 : 480;
-    } else {
-      return 480;
-    }
-  };
+    };
+
+    setChartHeight(computeChartHeight());
+
+    // Optional: Re-compute chart height on window resize
+    window.addEventListener('resize', () => {
+      setChartHeight(computeChartHeight());
+    });
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', computeChartHeight);
+    };
+  }, []);
 
   useEffect(() => {
     // Create Instance
@@ -106,7 +116,7 @@ const TradingWidget = () => {
       ref={chartRef}
       style={{
         width: '100%',
-        height: computeChartHeight(),
+        height: chartHeight,
         background: 'rgba(255, 255, 255, 0)',
         borderRadius: '8px',
       }}

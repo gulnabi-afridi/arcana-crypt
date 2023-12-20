@@ -15,7 +15,7 @@ const Card = () => {
             className='object-fill z-10'
           />
           <Image
-            src='/assets/crypto.svg'
+            src='/assets/coin.svg'
             alt=''
             width={24}
             height={24}

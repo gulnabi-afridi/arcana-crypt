@@ -88,7 +88,7 @@ const MarketInformation = () => {
               </p>
               <div className='flex justify-center items-center bg-[#012A36] py-[6px] px-[8px] rounded-[8px] gap-2'>
                 <Image
-                  src='/assets/crypto.svg'
+                  src='/assets/coin.svg'
                   alt=''
                   width={32}
                   height={32}

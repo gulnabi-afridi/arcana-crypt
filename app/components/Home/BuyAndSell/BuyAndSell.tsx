@@ -98,7 +98,7 @@ const BuyAndSell = () => {
           </p>
           <button className='flex justify-center items-center gap-2'>
             <Image
-              src='/assets/crypto.svg'
+              src='/assets/coin.svg'
               alt=''
               width={20}
               height={20}
