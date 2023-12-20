@@ -8,16 +8,14 @@
   box-sizing: border-box;
 }
 
-body {
-  background: linear-gradient(90deg, #01171e 0%, #012732 100%);
-}
-
 /* slider card css ============>  */
-.cardShadow {
-  border: 1px solid var(--foreground-night-400, rgba(255, 255, 255, 0.13));
-  background: var(--background-night-900-high-emphasis, #012a36);
+.cardShadowBor {
   box-shadow: 0px 32px 40px -2px rgba(0, 0, 0, 0.08),
     0px 1px 1px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--foreground-night-400, rgba(255, 255, 255, 0.13));
+}
+.cardShadow {
+  background: var(--background-night-900-high-emphasis, #012a36);
 }
 .borderColor {
   border-color: var(--foreground-night-400, rgba(255, 255, 255, 0.13));

@@ -12,7 +12,11 @@ const TradingWidget = () => {
   const [chartHeight, setChartHeight] = useState<number>();
 
   const computeChartHeight = () => {
-    return window.innerWidth < 700 ? 300 : 480;
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 700 ? 300 : 480;
+    } else {
+      return 480;
+    }
   };
 
   useEffect(() => {

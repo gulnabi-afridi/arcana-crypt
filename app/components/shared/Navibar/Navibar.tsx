@@ -28,7 +28,7 @@ const Navibar = () => {
             {naviLinks.map((item, index) => {
               return (
                 <Link
-                  className='text-[16px] font-medium dark:text-foreground-100 text-foreground-900 relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:bg-white after:dark:bg-foreground-100 hover:after:w-full after:duration-200'
+                  className='text-[16px] font-medium dark:text-foreground-100 text-foreground-900 relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:dark:bg-foreground-100 after:bg-foreground-900 hover:after:w-full after:duration-200'
                   key={index}
                   href={item.path}
                 >
@@ -42,12 +42,12 @@ const Navibar = () => {
         <div className='flex gap-10 justify-center items-center'>
           <Link
             href='#'
-            className='text-[16px] md:block hidden dark:text-foreground-100 from-gray-900 font-medium relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:dark:bg-foreground-100 hover:after:w-full after:duration-200'
+            className='text-[16px] md:block hidden dark:text-foreground-100 from-gray-900 font-medium relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:dark:bg-foreground-100 after:bg-foreground-900 hover:after:w-full after:duration-200'
           >
             MM Bot
           </Link>
           {/* button -----> */}
-          <button className='px-[16px] md:block hidden py-[10px] text-[16px] dark:text-foreground-100 from-gray-900 font-medium dark:bg-primary-100 bg-primary-900 hover:opacity-80 active:translate-y-[2px] rounded-[12px]'>
+          <button className='px-[16px] md:block hidden py-[10px] text-[16px] text-foreground-100 from-gray-900 font-medium dark:bg-primary-100 bg-primary-900 hover:opacity-80 active:translate-y-[2px] rounded-[12px]'>
             Trade on Zeta brev
           </button>
 
@@ -98,7 +98,7 @@ const Navibar = () => {
                     MM Bot
                   </Link>
                   {/* button -----> */}
-                  <button className='px-[16px] mt-8 py-[10px] text-[18px] dark:text-foreground-100 from-gray-900 font-medium dark:bg-primary-100 bg-primary-900 hover:opacity-80 active:translate-y-[2px] rounded-[12px]'>
+                  <button className='px-[16px] mt-8 py-[10px] text-[18px] text-foreground-100 from-gray-900 font-medium dark:bg-primary-100 bg-primary-900 hover:opacity-80 active:translate-y-[2px] rounded-[12px]'>
                     Trade on Zeta brev
                   </button>
                 </div>
