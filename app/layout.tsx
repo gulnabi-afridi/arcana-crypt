@@ -4,6 +4,7 @@
 import { Inter } from 'next/font/google';
 import './styles/globals.css';
 import './styles/klinechart.css';
+import './styles/marketDepth.css';
 import Navibar from './components/shared/Navibar/Navibar';
 import { ThemeProvider } from 'next-themes';
 

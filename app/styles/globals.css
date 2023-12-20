@@ -12,11 +12,7 @@ body {
   background: linear-gradient(90deg, #01171e 0%, #012732 100%);
 }
 
-.hideScrollBar::-webkit-scrollbar {
-  display: none;
-}
-
-/* slider card css ==========>  */
+/* slider card css ============>  */
 .cardShadow {
   border: 1px solid var(--foreground-night-400, rgba(255, 255, 255, 0.13));
   background: var(--background-night-900-high-emphasis, #012a36);
@@ -33,13 +29,14 @@ body {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-/* slider card css ends here ==========>  */
+/* slider card css ends here ============>  */
 
 /* buy and sell css =============>  */
 
 .halfBg {
   background: var(--Danger-500, rgba(249, 86, 79, 0.19));
 }
+
 /* buy and sell css ends here ============>  */
 
 input::-webkit-outer-spin-button,
@@ -48,7 +45,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* order book styles ===============>  */
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* order book styles =================>  */
 .orderBookSha {
   border-radius: 16px;
   border: 1px solid var(--foreground-night-400, rgba(255, 255, 255, 0.13));
@@ -65,36 +66,4 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
-.depth-chart-module_canvasContainer__LeU2- {
-  background-color: transparent !important;
-}
-
-.highcharts-background {
-  fill: transparent !important;
-}
-
-#container text {
-  fill: white !important;
-  opacity: 50%;
-}
-.highcharts-tooltip {
-  display: none !important;
-}
-
-.highcharts-yaxis-labels {
-  display: none !important;
-}
-.highcharts-credits {
-  display: none !important;
-}
-
-.highcharts-plot-line {
-  stroke: white;
-  opacity: 60%;
-  stroke-dasharray: 4, 2;
-}
-.highcharts-axis-line {
-  stroke: white;
-  opacity: 60%;
-  stroke-dasharray: 4, 2;
-}
+/* order book styles ends here ===============>  */

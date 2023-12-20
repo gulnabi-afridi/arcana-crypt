@@ -1,0 +1,29 @@
+.highcharts-background {
+  fill: transparent !important;
+}
+
+#container text {
+  fill: white !important;
+  opacity: 50%;
+}
+.highcharts-tooltip {
+  display: none !important;
+}
+
+.highcharts-yaxis-labels {
+  display: none !important;
+}
+.highcharts-credits {
+  display: none !important;
+}
+
+.highcharts-plot-line {
+  stroke: white;
+  opacity: 60%;
+  stroke-dasharray: 4, 2;
+}
+.highcharts-axis-line {
+  stroke: white;
+  opacity: 60%;
+  stroke-dasharray: 4, 2;
+}
