@@ -61,11 +61,40 @@ input::-webkit-inner-spin-button {
   background: var(--foreground-night-100, rgba(255, 255, 255, 0.03));
 }
 
-.recharts-bar-rectangle path {
-  border-radius: 30px !important;
-  background-color: red !important;
-}
-
 .recharts-cartesian-grid-horizontal :last-child {
   display: none;
+}
+
+.depth-chart-module_canvasContainer__LeU2- {
+  background-color: transparent !important;
+}
+
+.highcharts-background {
+  fill: transparent !important;
+}
+
+#container text {
+  fill: white !important;
+  opacity: 50%;
+}
+.highcharts-tooltip {
+  display: none !important;
+}
+
+.highcharts-yaxis-labels {
+  display: none !important;
+}
+.highcharts-credits {
+  display: none !important;
+}
+
+.highcharts-plot-line {
+  stroke: white;
+  opacity: 60%;
+  stroke-dasharray: 4, 2;
+}
+.highcharts-axis-line {
+  stroke: white;
+  opacity: 60%;
+  stroke-dasharray: 4, 2;
 }

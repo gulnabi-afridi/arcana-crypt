@@ -93,7 +93,7 @@ const MarketVolume = () => {
                     timeLine === item
                       ? 'bg-white text-black'
                       : 'timeLine text-white'
-                  } text-white font-medium uppercase py-[2px] px-[12px] rounded-[12px]`}
+                  } font-medium uppercase py-[2px] px-[12px] rounded-[12px]`}
                 >
                   {item}
                 </button>

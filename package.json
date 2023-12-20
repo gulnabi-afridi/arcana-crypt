@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@klinecharts/pro": "^0.1.1",
+    "highcharts": "^11.2.0",
     "next": "14.0.4",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
