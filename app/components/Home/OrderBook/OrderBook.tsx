@@ -3,7 +3,7 @@ import * as Icons from '../../../svg/Icons';
 
 const OrderBook = () => {
   return (
-    <div className='w-full h-full flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 orderBookSha'>
+    <div className=' h-full flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 orderBookSha'>
       <div className='w-full grid grid-cols-2 md:grid-cols-[2fr,1fr,1.5fr] gap-y-4'>
         <div className='flex justify-start items-center gap-1 order-1'>
           <p className='text-[20px] text-white'>Orderbook</p>

@@ -42,16 +42,16 @@ export default function Home() {
           </div>
         </div>
       </ComponentWrapper>
-      <div className='w-full bg-[#01171E] py-10'>
+      <div className='w-full bg-[#01171E] py-6 sm:py-10'>
         <ComponentWrapper>
           {/* trade history ===========>  */}
-          {/* <TradeHistory /> */}
+          <TradeHistory />
           {/* market infomation + additional detail =======> */}
-          <div className='w-full grid gap-6 grid-cols-2 py-10'>
+          <div className='w-full grid gap-6 grid-cols-1 lg:grid-cols-2 py-10 items-start'>
             {/* Market Volumne --->  */}
-            {/* <MarketInformation /> */}
+            <MarketInformation />
             {/* Additional Detail -----> */}
-            {/* <AdditionalDetails /> */}
+            <AdditionalDetails />
           </div>
           {/* <ToggleTheme /> */}
         </ComponentWrapper>

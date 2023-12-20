@@ -4,14 +4,14 @@ import * as Icons from '../../../svg/Icons';
 const TradeHistory = () => {
   return (
     <div className='w-full flex flex-col gap-4 items-start'>
-      <div className='flex justify-center items-center gap-3 px-8'>
+      <div className='flex justify-center items-center gap-3 sm:px-8'>
         <p className='text-[20px] text-white font-medium'>Trade history</p>
         <p className='text-green text-[12px] font-medium'>• Live</p>
       </div>
       {/* table ----->  */}
-      <div className='w-full flex flex-col bg-[#09303c] border-[1px] borderColor rounded-[16px]'>
+      <div className='w-full flex flex-col overflow-auto hideScrollBar bg-[#09303c] border-[1px] borderColor rounded-[16px]'>
         {/* table header -->  */}
-        <div className='w-full h-[40px] grid grid-cols-[1fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr] px-8 justify-center items-center'>
+        <div className='w-full min-w-[980px] h-[40px] grid grid-cols-[1fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr] px-4 sm:px-8 justify-center items-center'>
           {historyTableHeader.map((item, index) => {
             return (
               <p
@@ -26,7 +26,7 @@ const TradeHistory = () => {
           })}
         </div>
         {/* table rows ---->  */}
-        <div className='w-full max-h-[150px] md:max-h-[250px] overflow-auto hideScrollBar'>
+        <div className='w-full min-w-[980px] max-h-[200px] sm:max-h-[250px] overflow-auto hideScrollBar'>
           {historyTableRows.map((item, index) => {
             return (
               <div
@@ -37,7 +37,7 @@ const TradeHistory = () => {
                     : 'border-b-[1px] borderColor'
                 } ${
                   item.trade === 'sell' ? 'bg-[#012a36]' : ''
-                } h-[40px] grid grid-cols-[1fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr] px-8 justify-center items-center`}
+                } h-[40px] grid grid-cols-[1fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr] px-4 sm:px-8 justify-center items-center`}
               >
                 {/* button */}
                 <div className='w-full flex justify-start items-center'>

@@ -16,7 +16,7 @@ const Navibar = () => {
 
   return (
     <ComponentWrapper>
-      <div className='w-full h-[80px] flex justify-between items-center'>
+      <div className='w-full h-[60px] sm:h-[80px] flex justify-between items-center'>
         {/* left portion ---------------->  */}
         <div className='flex gap-24 justify-center items-center'>
           {/* logo --> */}

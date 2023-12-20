@@ -6,7 +6,7 @@ import Marquee from 'react-fast-marquee';
 
 const InfoSlider = () => {
   return (
-    <div className='py-6'>
+    <div className='py-4 sm:py-6'>
       <Marquee
         gradient={false}
         pauseOnHover={true}
