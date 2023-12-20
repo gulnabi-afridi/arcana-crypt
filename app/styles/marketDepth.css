@@ -30,7 +30,11 @@
   opacity: 60%;
   stroke-dasharray: 4, 2;
 }
-
+#container text {
+  font-size: 14px !important;
+  fill: white !important;
+  opacity: 40% !important;
+}
 @media screen and (max-width: 850px) {
   .marketDepthCon {
     max-width: 350px;
