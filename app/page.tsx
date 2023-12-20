@@ -31,7 +31,7 @@ export default function Home() {
             </div>
           </div>
           {/* order book + market volume + market depth section =========> */}
-          <div className='w-full grid grid-cols-1 xl:grid-cols-[1.9fr,1fr] gap-6 xl:gap-0 justify-center items-start pt-6 pb-20'>
+          <div className='w-full grid grid-cols-1 xl:grid-cols-[1.9fr,1fr] gap-6 xl:gap-0 justify-center items-start pt-6 pb-10 sm:pb-20'>
             {/* order book ---> */}
             <OrderBook />
             {/* market volume ----->  */}

@@ -80,3 +80,7 @@ input::-webkit-inner-spin-button {
     background-color: #012732 !important;
   }
 }
+
+tspan {
+  font-size: 10px !important;
+}

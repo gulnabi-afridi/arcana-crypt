@@ -43,13 +43,16 @@ const TradingWidget = () => {
               xAxis: {
                 show: true,
                 size: 'auto',
+
                 axisLine: {
                   show: true,
                   color: '#676767',
                 },
               },
+
               yAxis: {
                 show: true,
+                size: 'auto',
                 axisLine: {
                   show: true,
                   color: '#676767',
@@ -81,6 +84,7 @@ const TradingWidget = () => {
             },
             locale: 'en',
             mainIndicators: [],
+            subIndicators: [],
             symbol: {
               exchange: 'XNYS',
               market: 'stocks',
@@ -90,7 +94,7 @@ const TradingWidget = () => {
               type: 'ADRC',
             },
             // Default period
-            period: { multiplier: 15, timespan: 'minute', text: '15m' },
+            period: { multiplier: 15, timespan: 'minute', text: '0m' },
             // The default data access is used here. If the default data is also used in actual use, you need to go to the https://polygon.io/ apply for API key
             datafeed: new DefaultDatafeed(apiKey),
           });

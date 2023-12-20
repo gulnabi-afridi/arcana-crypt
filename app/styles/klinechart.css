@@ -1,12 +1,15 @@
 .klinecharts-pro-watermark {
   display: none !important;
 }
-
 .tools {
   display: none !important;
 }
 .klinecharts-pro-period-bar {
   border-bottom: none !important;
+}
+
+.klinecharts-pro-content {
+  margin-right: 0px !important;
 }
 .klinecharts-pro-drawing-bar {
   border-right: none !important;
@@ -86,5 +89,11 @@
   }
   .klinecharts-pro-period-bar {
     overflow: scroll !important;
+  }
+  .klinecharts-pro-drawing-bar {
+    width: 30px !important;
+  }
+  .klinecharts-pro-widget {
+    width: calc(100% - 30px) !important;
   }
 }
