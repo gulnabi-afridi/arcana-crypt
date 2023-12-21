@@ -79,9 +79,11 @@ const MarketVolume = () => {
 
   return (
     <div className='w-full flex justify-center items-center'>
-      <div className='h-[300px] sm:h-[340px] w-full max-w-[400px] flex flex-col justify-between items-center cardShadow rounded-[16px]'>
+      <div className='h-[300px] sm:h-[340px] w-full max-w-[400px] flex flex-col justify-between items-center bg-background-900 dark:bg-background-100 cardShadowBor rounded-[16px]'>
         <div className='w-full flex flex-col items-start gap-3 p-5'>
-          <p className='text-[20px] text-white '>Market Volume (USD)</p>
+          <p className='text-[20px] text-white opacity-80 dark:opacity-100'>
+            Market Volume (USD)
+          </p>
           {/* time line --->  */}
           <div className='flex justify-center items-center gap-3'>
             {timeLineData.map((item: any, index: number) => {
@@ -91,7 +93,7 @@ const MarketVolume = () => {
                   key={index}
                   className={`text-[12px] ${
                     timeLine === item
-                      ? 'bg-white text-black'
+                      ? 'bg-white opacity-90 text-black'
                       : 'timeLine text-white'
                   } font-medium uppercase py-[2px] px-[12px] rounded-[12px]`}
                 >

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import ComponentWrapper from '../Wrappers/ComponentWrapper/ComponentWrapper';
 import * as Icons from '../../../svg/Icons';
 import Link from 'next/link';
-import ToggleTheme from '../ToggleTheme/ToggleTheme';
 import { Spin as Hamburger } from 'hamburger-react';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
+import ToggleTheme from '../ToggleTheme/ToggleTheme';
 
 const Navibar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,6 +46,8 @@ const Navibar = () => {
           >
             MM Bot
           </Link>
+          {/* theme toggle ------->  */}
+          <ToggleTheme />
           {/* button -----> */}
           <button className='px-[16px] md:block hidden py-[10px] text-[16px] text-foreground-100 from-gray-900 font-medium dark:bg-primary-100 bg-primary-900 hover:opacity-80 active:translate-y-[2px] rounded-[12px]'>
             Trade on Zeta brev

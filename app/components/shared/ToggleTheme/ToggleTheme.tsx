@@ -1,17 +1,32 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { LuSun } from 'react-icons/lu';
+import { IoMoonSharp } from 'react-icons/io5';
 
 const ToggleTheme = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  const handleOnClick = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
 
   return (
-    <button
-      onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
-      className='bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-green dark:text-red px-2 py-1 text-[16px] rounded-lg'
-    >
-      Toggle Mode
+    <button onClick={handleOnClick} className='px-2 py-1 rounded-lg'>
+      {theme === 'dark' ? (
+        <LuSun className='text-background-900 dark:text-white text-[22px] hover:opacity-80' />
+      ) : (
+        <IoMoonSharp className='text-background-900 dark:text-white text-[22px] hover:opacity-80' />
+      )}
     </button>
   );
 };

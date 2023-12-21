@@ -6,9 +6,9 @@ import Link from 'next/link';
 const MarketInformation = () => {
   return (
     <div className='w-full flex justify-center items-center'>
-      <div className='w-full max-w-[600px] lg:max-w-[650px] flex flex-col bg-[#09303c] border-[1px] borderColor rounded-[16px] '>
+      <div className='w-full max-w-[600px] lg:max-w-[650px] flex flex-col bg-foreground-900 dark:bg-[#09303c] border-[1px] borderColor rounded-[16px] '>
         <div className='w-full h-[60px] flex justify-between items-center px-4 sm:px-8'>
-          <p className='text-[16px] sm:text-[20px] text-white font-semibold'>
+          <p className='text-[16px] sm:text-[20px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-semibold'>
             Market Information
           </p>
           <p className='text-[10px] sm:text-[16px] font-semibold text-white/50'>
@@ -16,14 +16,16 @@ const MarketInformation = () => {
           </p>
         </div>
         {/* trade ---->   */}
-        <div className='w-full bg-[#012A36] py-4 flex justify-between items-center border-b-[1px] borderColor px-4 sm:px-8'>
-          <p className='text-[14px] font-normal text-white'>Trade</p>
+        <div className='w-full bg-background-800 dark:bg-[#012A36] py-4 flex justify-between items-center border-b-[1px] borderColor px-4 sm:px-8'>
+          <p className='text-[14px] font-normal text-foreground-100 dark:opacity-100 opacity-80 dark:text-white'>
+            Trade
+          </p>
           <div className='flex flex-wrap justify-center items-center gap-3'>
             {tradeInCoin.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className='bg-[#E3DB680D] px-[5px] h-[25px] flex justify-center items-center rounded-[4px]'
+                  className='bg-background-900 dark:bg-[#E3DB680D] px-[5px] h-[25px] flex justify-center items-center rounded-[4px]'
                 >
                   {index === 2 ? (
                     <Icons.prism />
@@ -53,7 +55,7 @@ const MarketInformation = () => {
                   <p className='text-[12px] sm:text-[14px] text-white/50 font-medium'>
                     {item.value}
                   </p>
-                  <p className='text-[18px]  sm:text-[24px] text-white font-semibold'>
+                  <p className='text-[18px]  sm:text-[24px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-semibold'>
                     {item.name}
                   </p>
                 </div>
@@ -66,7 +68,7 @@ const MarketInformation = () => {
               <p className='text-[12px] sm:text-[14px] text-white/50 font-medium'>
                 Base token
               </p>
-              <div className='flex justify-center items-center bg-[#012A36] py-[6px] px-[8px] rounded-[8px] gap-2'>
+              <div className='flex justify-center items-center bg-background-800 dark:bg-[#012A36] py-[6px] px-[8px] rounded-[8px] gap-2'>
                 <Image
                   src='/assets/bonk.svg'
                   alt=''
@@ -74,7 +76,7 @@ const MarketInformation = () => {
                   height={32}
                   className='object-fill'
                 />
-                <p className='text-[16px] sm:text-[20px] text-white font-medium'>
+                <p className='text-[16px] sm:text-[20px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium'>
                   Pyth network
                 </p>
                 <button>
@@ -86,7 +88,7 @@ const MarketInformation = () => {
               <p className='text-[12px] sm:text-[14px] text-white/50 font-medium'>
                 Quote token
               </p>
-              <div className='flex justify-center items-center bg-[#012A36] py-[6px] px-[8px] rounded-[8px] gap-2'>
+              <div className='flex justify-center items-center bg-background-800 dark:bg-[#012A36] py-[6px] px-[8px] rounded-[8px] gap-2'>
                 <Image
                   src='/assets/coin.svg'
                   alt=''
@@ -94,7 +96,7 @@ const MarketInformation = () => {
                   height={32}
                   className='object-fill'
                 />
-                <p className='text-[16px] sm:text-[20px] text-white font-medium'>
+                <p className='text-[16px] sm:text-[20px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium'>
                   USD Coin
                 </p>
                 <button>
@@ -112,13 +114,13 @@ const MarketInformation = () => {
                 key={index}
                 className='w-full h-[45px] flex justify-between items-center border-b-[1px] borderColor'
               >
-                <p className='text-[14px] min-w-[90px] font-medium text-white'>
+                <p className='text-[14px] min-w-[90px] font-medium text-foreground-100 dark:opacity-100 opacity-80 dark:text-white'>
                   {item.name}
                 </p>
                 <div className='flex justify-center items-center gap-1'>
                   <Link
                     href='#'
-                    className='underline text-[12px] break-all text-white font-medium  '
+                    className='underline text-[12px] break-all text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium  '
                   >
                     {item.link}
                   </Link>

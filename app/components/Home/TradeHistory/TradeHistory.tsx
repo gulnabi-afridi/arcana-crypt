@@ -5,11 +5,13 @@ const TradeHistory = () => {
   return (
     <div className='w-full flex flex-col gap-4 items-start'>
       <div className='flex justify-center items-center gap-3 sm:px-8'>
-        <p className='text-[20px] text-white font-medium'>Trade history</p>
+        <p className='text-[20px] text-foreground-900 dark:text-foreground-100 dark:opacity-80 opacity-100 font-medium'>
+          Trade history
+        </p>
         <p className='text-green text-[12px] font-medium'>• Live</p>
       </div>
       {/* table ----->  */}
-      <div className='w-full flex flex-col overflow-auto hideScrollBar bg-[#09303c] border-[1px] borderColor rounded-[16px]'>
+      <div className='w-full flex flex-col overflow-auto hideScrollBar bg-background-900 dark:bg-[#09303c] border-[1px] borderColor rounded-[16px]'>
         {/* table header -->  */}
         <div className='w-full min-w-[980px] h-[40px] grid grid-cols-[1fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr] px-4 sm:px-8 justify-center items-center'>
           {historyTableHeader.map((item, index) => {
@@ -18,7 +20,7 @@ const TradeHistory = () => {
                 key={index}
                 className={`flex ${
                   item === 'Transaction' ? 'justify-end' : 'justify-start'
-                }  text-[14px] font-medium capitalize text-white/50 items-center w-full`}
+                }  text-[14px] font-medium capitalize text-foreground-100 opacity-70 items-center w-full`}
               >
                 {item}
               </p>
@@ -36,13 +38,15 @@ const TradeHistory = () => {
                     ? ' rounded-b-[16px]'
                     : 'border-b-[1px] borderColor'
                 } ${
-                  item.trade === 'sell' ? 'bg-[#012a36]' : ''
+                  item.trade === 'sell'
+                    ? 'bg-background-800 dark:bg-[#012a36]'
+                    : ''
                 } h-[40px] grid grid-cols-[1fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr,1.5fr] px-4 sm:px-8 justify-center items-center`}
               >
                 {/* button */}
                 <div className='w-full flex justify-start items-center'>
                   <button
-                    className={`text-[12px] capitalize font-medium text-white py-[2px] px-[12px] ${
+                    className={`text-[12px] capitalize font-medium text-foreground-100 dark:opacity-80 opacity-100 py-[2px] px-[12px] ${
                       item.trade === 'sell' ? 'bg-red' : 'bg-green'
                     } rounded-[12px]`}
                   >
@@ -50,20 +54,20 @@ const TradeHistory = () => {
                   </button>
                 </div>
                 {/* timestamp  */}
-                <p className='text-[14px] text-white font-medium w-full text-left'>
+                <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 font-medium w-full text-left'>
                   {item.timeStamp}
                 </p>
                 {/* price */}
-                <p className='text-[14px] text-white font-medium w-full text-left'>
+                <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 font-medium w-full text-left'>
                   {item.price}
                 </p>
                 {/* size */}
-                <p className='text-[14px] text-white font-medium w-full text-left'>
+                <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 font-medium w-full text-left'>
                   {item.size}
                 </p>
                 {/* taker */}
-                <div className='w-full flex text-white gap-1 justify-start items-center'>
-                  <p className='text-[14px] text-white font-medium'>
+                <div className='w-full flex text-foreground-100 dark:opacity-100 opacity-80 gap-1 justify-start items-center'>
+                  <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 font-medium'>
                     {item.taker}
                   </p>
                   <button>
@@ -71,8 +75,8 @@ const TradeHistory = () => {
                   </button>
                 </div>
                 {/* maker */}
-                <div className='w-full flex text-white gap-1 justify-start items-center'>
-                  <p className='text-[14px] text-white font-medium'>
+                <div className='w-full flex text-foreground-100 dark:opacity-100 opacity-80 gap-1 justify-start items-center'>
+                  <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 font-medium'>
                     {item.maker}
                   </p>
                   <button>
@@ -80,8 +84,8 @@ const TradeHistory = () => {
                   </button>
                 </div>
                 {/* Transaction */}
-                <div className='w-full flex text-white gap-1 justify-end items-center'>
-                  <p className='text-[14px] text-white font-medium'>
+                <div className='w-full flex text-foreground-100 dark:opacity-100 opacity-80 gap-1 justify-end items-center'>
+                  <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 font-medium'>
                     {item.transaction}
                   </p>
                   <button>

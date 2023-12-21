@@ -23,7 +23,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`dark:bg-black-gradient bg-offWhite ${inter.className}`}>
-        <ThemeProvider defaultTheme='dark' attribute='class'>
+        <ThemeProvider
+          defaultTheme='dark'
+          enableSystem={false}
+          attribute='class'
+        >
           <Navibar />
           {children}
         </ThemeProvider>

@@ -3,8 +3,18 @@
 import React, { useRef, useEffect, useState } from 'react';
 // Import css
 import '@klinecharts/pro/dist/klinecharts-pro.css';
+import { useTheme } from 'next-themes';
 
 const TradingWidget = () => {
+  const { theme } = useTheme();
+  const [backgroundColor, setBackgroundColor] = useState(
+    'rgba(255, 255, 255, 0)'
+  );
+
+  useEffect(() => {
+    setBackgroundColor(theme === 'dark' ? 'rgba(255, 255, 255, 0)' : '#1D1D20');
+  }, [theme]);
+
   const chartRef = useRef<HTMLDivElement | null>(null);
   const chartInitializedRef = useRef<boolean>(false);
   const apiKey = 'Dj7335wndobLF3uODz735o1mwixibkFr';
@@ -13,7 +23,7 @@ const TradingWidget = () => {
 
   useEffect(() => {
     const computeChartHeight = () => {
-      return window.innerWidth < 700 ? 300 : 480;
+      return window.innerWidth < 700 ? 300 : 450;
     };
 
     setChartHeight(computeChartHeight());
@@ -117,7 +127,7 @@ const TradingWidget = () => {
       style={{
         width: '100%',
         height: chartHeight,
-        background: 'rgba(255, 255, 255, 0)',
+        background: backgroundColor,
         borderRadius: '8px',
       }}
     ></div>

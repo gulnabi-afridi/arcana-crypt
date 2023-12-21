@@ -3,14 +3,16 @@ import * as Icons from '../../../svg/Icons';
 
 const OrderBook = () => {
   return (
-    <div className=' h-full flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 orderBookSha'>
+    <div className=' h-full flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 bg-foreground-900 cardShadowBor rounded-[16px] dark:bg-[#152531]'>
       <div className='w-full grid grid-cols-2 md:grid-cols-[2fr,1fr,1.5fr] gap-y-4'>
         <div className='flex justify-start items-center gap-1 order-1'>
-          <p className='text-[20px] text-white'>Orderbook</p>
+          <p className='text-[20px] text-foreground-100 opacity-80'>
+            Orderbook
+          </p>
           <p className='text-[12px] text-green'>• Live</p>
         </div>
         <div className='w-full flex justify-center items-center order-2'>
-          <div className='flex justify-center bg-[#012A36] rounded-[12px] py-[6px] px-[12px] items-center gap-1'>
+          <div className='flex justify-center bg-foreground-800 dark:bg-[#012A36] rounded-[12px] py-[6px] px-[12px] items-center gap-1'>
             <Icons.arrowUp />
             <p className='text-[14px] text-green font-medium'>0.1459881</p>
           </div>
@@ -20,7 +22,7 @@ const OrderBook = () => {
             <input
               placeholder='Search address, .sol domain...'
               type='text'
-              className='w-full h-full rounded-[12px] placeholder:opacity-30 text-white opacity-90 orderBookSearchBg border-none focus:outline-none pl-7 pr-2'
+              className='w-full h-full rounded-[12px] placeholder:opacity-30 text-foreground-100 opacity-90 orderBookSearchBg border-none focus:outline-none pl-7 pr-2'
             />
             <div className='absolute left-[10px] '>
               <Icons.search />
@@ -34,25 +36,25 @@ const OrderBook = () => {
         {/* header --> */}
         <div className='w-full min-w-[750px] h-[40px] grid grid-cols-[1fr,4fr,1fr] border-b-[1px] borderColor'>
           {/* owner */}
-          <p className='flex  justify-start w-full text-[14px] font-medium text-white/50'>
+          <p className='flex  justify-start w-full text-[14px] font-medium text-foreground-100/50'>
             Owner
           </p>
           <div className='w-full grid grid-cols-[1fr,3.5fr,1fr] sm:grid-cols-[1fr,2fr,1fr]'>
             {/* size ---> */}
-            <p className='flex justify-end w-full text-[14px] font-medium text-white/50'>
+            <p className='flex justify-end w-full text-[14px] font-medium text-foreground-100/50'>
               Size
             </p>
             {/* price ---> */}
-            <p className='flex justify-center w-full text-[14px] font-medium text-white/50'>
+            <p className='flex justify-center w-full text-[14px] font-medium text-foreground-100/50'>
               Price
             </p>
             {/* size ---> */}
-            <p className='flex justify-start w-full text-[14px] font-medium text-white/50'>
+            <p className='flex justify-start w-full text-[14px] font-medium text-foreground-100/50'>
               Size
             </p>
           </div>
           {/* owner ---> */}
-          <p className='flex justify-end w-full text-[14px] font-medium text-white/50'>
+          <p className='flex justify-end w-full text-[14px] font-medium text-foreground-100/50'>
             Owner
           </p>
         </div>
@@ -65,12 +67,12 @@ const OrderBook = () => {
                 className='w-full grid grid-cols-[1fr,4fr,1fr] min-h-[35px] justify-center items-center'
               >
                 {/* owner */}
-                <p className='text-[14px] items-center w-full flex justify-start text-white font-medium underline'>
+                <p className='text-[14px] items-center w-full flex justify-start text-foreground-100 opacity-80 font-medium underline'>
                   {item.owner}
                 </p>
                 <div className='w-full h-full relative grid grid-cols-[1fr,3.5fr,1fr] sm:grid-cols-[1fr,2fr,1fr] z-20'>
                   {/* size */}
-                  <p className='text-[14px] w-full items-center flex justify-end text-white font-medium'>
+                  <p className='text-[14px] w-full items-center flex justify-end text-foreground-100 opacity-80 font-medium'>
                     {item.size}
                   </p>
                   <div className='w-full grid grid-cols-2'>
@@ -84,7 +86,7 @@ const OrderBook = () => {
                     </p>
                   </div>
                   {/* size */}
-                  <p className='text-[14px] w-full flex justify-start items-center pl-1 text-white font-medium'>
+                  <p className='text-[14px] w-full flex justify-start items-center pl-1 text-foreground-100 opacity-80 font-medium'>
                     {item.size2}
                   </p>
                   {/* indicator ----->  */}
@@ -97,7 +99,7 @@ const OrderBook = () => {
                 </div>
 
                 {/* owner   */}
-                <p className='text-[14px] w-full flex justify-end items-center text-white font-medium underline'>
+                <p className='text-[14px] w-full flex justify-end items-center text-foreground-100 opacity-80 font-medium underline'>
                   {item.owner2}
                 </p>
               </div>
@@ -106,13 +108,15 @@ const OrderBook = () => {
         </div>
       </div>
       {/* spread row ====>  */}
-      <div className='w-full h-[40px] bg-[#192431] rounded-[16px]  flex justify-between items-center'>
-        <p className='text-white text-[14px] font-medium pl-4'>Spread</p>
-        <p className='text-white text-[14px] font-medium'>
+      <div className='w-full h-[40px] bg-background-800 dark:bg-[#192431] rounded-[16px]  flex justify-between items-center'>
+        <p className='text-foreground-100 text-[14px] font-medium pl-4'>
+          Spread
+        </p>
+        <p className='text-foreground-100 text-[14px] font-medium'>
           0.00012 (0.00004%){' '}
         </p>
-        <button className='flex justify-center h-full bg-[#012A36] px-2 rounded-[12px] items-center gap-1'>
-          <p className='text-white text-[14px] font-medium'>$0.001</p>
+        <button className='flex justify-center h-full bg-background-900 dark:bg-[#012A36] px-2 rounded-[12px] items-center gap-1'>
+          <p className='text-foreground-100 text-[14px] font-medium'>$0.001</p>
           <Icons.arrowDown2 />
         </button>
       </div>

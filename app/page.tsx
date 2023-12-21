@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
       </ComponentWrapper>
-      <div className='w-full bg-[#01171E] py-6 sm:py-10'>
+      <div className='w-full bg-[#e0e0e0] dark:bg-[#01171E] py-6 sm:py-10'>
         <ComponentWrapper>
           {/* trade history ===========>  */}
           <TradeHistory />

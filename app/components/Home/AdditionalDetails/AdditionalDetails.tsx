@@ -6,9 +6,9 @@ import * as Icons from '../../../svg/Icons';
 const AdditionalDetails = () => {
   return (
     <div className='w-full flex justify-center items-center'>
-      <div className='w-full max-w-[600px] lg:max-w-[650px] h-fit flex flex-col bg-[#09303c] border-[1px] borderColor rounded-[16px]'>
+      <div className='w-full max-w-[600px] lg:max-w-[650px] h-fit flex flex-col bg-background-900 dark:bg-[#09303c] border-[1px] borderColor rounded-[16px]'>
         <div className='w-full h-[60px] flex justify-start border-b-[1px] borderColor items-center px-4 sm:px-8'>
-          <p className='text-[16px] sm:text-[20px] text-white font-semibold'>
+          <p className='text-[16px] sm:text-[20px] text-white dark:opacity-100 opacity-80 font-semibold'>
             Additional details
           </p>
         </div>
@@ -26,7 +26,7 @@ const AdditionalDetails = () => {
                 height={32}
                 className='object-fill'
               />
-              <p className='text-white text-[18px] sm:text-[24px] font-semibold'>
+              <p className='text-foreground-100 dark:opacity-100 opacity-80 dark:text-whitetext-[18px] sm:text-[24px] font-semibold'>
                 1,504,458,484,676.00
               </p>
             </div>
@@ -43,7 +43,7 @@ const AdditionalDetails = () => {
                 height={32}
                 className='object-fill'
               />
-              <p className='text-white text-[18px] sm:text-[24px] font-semibold'>
+              <p className='text-foreground-100 dark:opacity-100 opacity-80 dark:text-white text-[18px] sm:text-[24px] font-semibold'>
                 744,488,984.45
               </p>
             </div>
@@ -57,23 +57,23 @@ const AdditionalDetails = () => {
                 key={index}
                 className='w-full h-[45px] border-b-[1px] borderColor flex justify-between items-center'
               >
-                <p className='text-[14px] text-white font-medium'>
+                <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium'>
                   {item.name}
                 </p>
-                <p className='text-[16px] text-white font-medium'>
+                <p className='text-[16px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-whitefont-medium'>
                   {item.value}
                 </p>
               </div>
             );
           })}
           <div className='w-full h-[45px] flex justify-between items-center'>
-            <p className='text-[14px] min-w-[120px] font-medium text-white'>
+            <p className='text-[14px] min-w-[120px] font-medium text-foreground-100 dark:opacity-100 opacity-80 dark:text-white'>
               Permalink
             </p>
             <div className='flex justify-center items-center gap-1'>
               <Link
                 href='#'
-                className='underline break-all text-[12px] text-white font-medium'
+                className='underline break-all text-[12px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium'
               >
                 https://arcana.markets/perma/1293uasco9u102h119204hn
               </Link>
@@ -83,21 +83,23 @@ const AdditionalDetails = () => {
             </div>
           </div>
           <div className='w-full pt-3 pb-4 flex justify-between items-center'>
-            <p className='text-[14px] text-white font-medium'>Tools</p>
+            <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium'>
+              Tools
+            </p>
             <div className='flex flex-wrap justify-end sm:justify-center items-center gap-2'>
               {/* Crank Market + List new Market --->  */}
               <div className='flex justify-center items-center gap-3'>
-                <div className='flex justify-center items-center bg-[#012A36] gap-1 py-2 px-3 rounded-[12px]'>
+                <div className='flex justify-center items-center bg-background-800 dark:bg-[#012A36] gap-1 py-2 px-3 rounded-[12px]'>
                   <Icons.crank />
-                  <p className='text-[14px] text-white font-medium '>
+                  <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium '>
                     Crank Market
                   </p>
                 </div>
               </div>
               <div className='flex justify-center items-center gap-3'>
-                <div className='flex justify-center items-center bg-[#012A36] gap-1 py-2 px-3 rounded-[12px]'>
+                <div className='flex justify-center items-center bg-background-800 dark:bg-[#012A36] gap-1 py-2 px-3 rounded-[12px]'>
                   <Icons.list />
-                  <p className='text-[14px] text-white font-medium '>
+                  <p className='text-[14px] text-foreground-100 dark:opacity-100 opacity-80 dark:text-white font-medium '>
                     List new Market
                   </p>
                 </div>
