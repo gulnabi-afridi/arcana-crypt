@@ -34,7 +34,7 @@ const MarketInformation = () => {
                       src={item.src}
                       alt=''
                       width={item.width}
-                      height={item.height}
+                      height={19}
                       className='object-contain'
                     />
                   )}
@@ -141,27 +141,22 @@ const tradeInCoin = [
   {
     src: '/assets/openBook.svg',
     width: 100,
-    height: 19,
   },
   {
     src: '/assets/dropCopy.svg',
     width: 63,
-    height: 19,
   },
   {
     src: '/assets/sloape.svg',
     width: 100,
-    height: 19,
   },
   {
     src: '/assets/sloape2.svg',
     width: 80,
-    height: 19,
   },
   {
     src: '/assets/lab.svg',
     width: 60,
-    height: 19,
   },
 ];
 const stats = [
