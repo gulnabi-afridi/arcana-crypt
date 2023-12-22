@@ -6,10 +6,10 @@ import 'highcharts/modules/accessibility';
 import Image from 'next/image';
 
 const MarketDepth = () => {
+  const chartRef = useRef(null);
   useEffect(() => {
-    const container = document.getElementById('container');
-    if (container) {
-      Highcharts.chart(container, {
+    if (chartRef.current) {
+      Highcharts.chart(chartRef.current, {
         chart: {
           type: 'area',
           zoomType: 'xy',
@@ -173,6 +173,7 @@ const MarketDepth = () => {
         </div>
 
         <div
+          ref={chartRef}
           id='container'
           className='w-full px-3 h-[70%] bg-transparent'
         ></div>
