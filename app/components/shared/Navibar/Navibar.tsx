@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import ComponentWrapper from '../Wrappers/ComponentWrapper/ComponentWrapper';
 import * as Icons from '../../../svg/Icons';
